@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <title>Indian Cricket Stars</title>
+</head>
+
+<body>
+    <div id="sectionHome">
+        <div class="bg-container d-flex flex-column justify-content-end">
+            <div class="tourism-card">
+                <h1 class="main-heading">Indian Cricket Stars</h1>
+                <p class="paragraph">Learn about your favorite players.</p>
+                <button class="button" onclick="display('sectionFavouritePlayers')">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionFavouritePlayers" class="favourite-places-bg-container">
+        <h1 class="favourite-places-heading">Favourite Players</h1>
+        <div class="favourite-place-card-container d-flex flex-row" onclick="display('sectionRohitSharmaDetailedView')">
+            <div>
+                <h1 class="favourite-place-card-heading">Rohit Sharma</h1>
+                <p class="favourite-place-card-description">Rohit Sharma is one of the most prolific Indian cricketers, known for his impeccable timing and leadership.</p>
+            </div>
+            <img src="https://tse4.mm.bing.net/th?id=OIF.8LfEIacdVD4250OLzAyAKg&pid=Api&P=0&h=180" class="favourite-place-card-image" alt="Rohit Sharma" />
+        </div>
+        <div class="favourite-place-card-container d-flex flex-row" onclick="display('sectionViratKohliDetailedView')">
+            <div>
+                <h1 class="favourite-place-card-heading">Virat Kohli</h1>
+                <p class="favourite-place-card-description">Virat Kohli is a dynamic and aggressive Indian cricketer, known for his consistency and record-breaking performances.</p>
+            </div>
+            <img src="https://tse1.mm.bing.net/th?id=OIP.GCy_6SInUjrt32PquGcWNgHaEz&pid=Api&P=0&h=180" class="favourite-place-card-image" alt="Virat Kohli" />
+        </div>
+        <div class="favourite-place-card-container d-flex flex-row" onclick="display('sectionSuryaDetailedView')">
+            <div>
+                <h1 class="favourite-place-card-heading">Suryakumar Yadav</h1>
+                <p class="favourite-place-card-description">Suryakumar Yadav is an exciting and innovative Indian cricketer, known for his flamboyant stroke play.</p>
+            </div>
+            <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/11/09120244/surya_14kumar_311744190_429352892484564_2758743675868780431_n-819x1024.jpg" class="favourite-place-card-image" alt="Suryakumar Yadav" />
+        </div>
+        <button class="btn btn-dark" onclick="display('sectionHome')">Back</button>
+    </div>
+
+    <div id="sectionRohitSharmaDetailedView" class="detailed-view-bg-container">
+        <h1 class="detailed-view-heading">Rohit Sharma</h1>
+        <div class="detailed-view-card-container">
+            <div class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://example.com/rohit-sharma1.jpg" class="d-block w-100" alt="Rohit Sharma Image 1" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://example.com/rohit-sharma2.jpg" class="d-block w-100" alt="Rohit Sharma Image 2" />
+                    </div>
+                </div>
+            </div>
+            <p class="detailed-view-card-description">Rohit Sharma is an Indian cricketer and captain of the Indian national team. He is known for his incredible batting style and holds numerous records, including the highest individual score in a One Day International (ODI) match.</p>
+        </div>
+        <button class="btn btn-dark" onclick="display('sectionFavouritePlayers')">Back</button>
+    </div>
+
+    <!-- Repeat similar sections for Virat Kohli and Suryakumar Yadav -->
+
+    <script>
+        function display(sectionId) {
+            document.querySelectorAll('div').forEach((section) => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
